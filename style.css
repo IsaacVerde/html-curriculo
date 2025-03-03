@@ -1,49 +1,171 @@
-*{
-    padding: 0;
-    margin: 0;
-    
+* {
+ padding: 0px;
+    margin: 0px;
 }
-.fundo{
-    background-image: linear-gradient(45deg ,blue, black);
-    height: 100vh;
-    font-family: "Poppins", serif;
-    color: aliceblue;
+
+.tituloCurriculo {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: "Kanit", serif;
+}
+
+.fotoPerfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.fotoPerfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.linhaDivisoria {
+    border-top: 3px solid #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.tituloInformacao {
+    font-family: "Kanit", serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
     text-align: center;
-
-}
-.calculadora{
-    position: absolute;
-    background-color: black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 15px;    
-    padding: 15px;
 }
 
-.botao{
-    width: 50px;  
-    height: 50px;
-    cursor: pointer;
-    font-size: 15px;
-    background-color: rgb(64, 62, 62);
-    border: none;
-    color: aliceblue;
-    margin: 3px;
+.declaracaoObjetiva {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.botao:hover{
-    background-color: rgb(25, 24, 24);
+.paragrafo {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-#resultado{
-    background-color: aliceblue;
-    width: 207px;
-    height: 30px;
-    margin: 25px;
-    font-size: 25px;
-    color: black;
-    text-align: right;
- 
+.tituloEscola {
+    font-family: "Kanit", serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
 }
- 
+
+.escolaridadeLista {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+}
+
+.cursosExtras {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+}
+
+.cursosExtrasLista {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+}
+
+.experiencias {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.paragrafoDois {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.paragrafoCaixa {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.projetos {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.projetosLista {
+    display: flex;
+    flex-wrap: wrap; /* Se houver muitos projetos, eles irão para a próxima linha */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os itens */
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.projeto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.habilidadesRelevantes {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.habilidadesRelevantesLista {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+}
+
+.contato {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tel, .email, .github {
+    font-family: "Kanit", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
