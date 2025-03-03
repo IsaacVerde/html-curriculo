@@ -1,111 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculo Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Sigmar&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Calculadora</title>
 </head>
 <body>
-    <div class="tituloCurriculo">
-        <h1>Curriculo Web Developer</h1>
-    </div>
-
-    <div class="fotoPerfil">
-        <img src="./Foto Portifolio/Captura de tela 2025-02-18 130615.png" width="200" height="200" alt="">
-    </div>
     
-    <hr class="linhaDivisoria">
+<div class="fundo">
+    <h1>Isaac Santos</h1>
+    <div class="calculadora">
+        <h1>Calculadora</h1>
+        <p id="resultado"></p>
+        <table> 
+            <tr>
+                <td><button class="botao" onclick="clean()"> C </button></td>
+                <td><button class="botao"onclick="back()"> < </button></td>
+                <td><button class="botao"onclick="insert('/')"> / </button></td>
+                <td><button class="botao"onclick="insert('*')"> X </button></td>
+            </tr>
+            <tr>
+                <td><button class="botao"onclick="insert('7')"> 7 </button></td>
+                <td><button class="botao"onclick="insert('8')"> 8 </button></td>
+                <td><button class="botao"onclick="insert('9')"> 9</button></td>
+                <td><button class="botao"onclick="insert('-')"> - </button></td>
+            </tr>
+            <tr>
+                <td><button class="botao"onclick="insert('4')"> 4 </button></td>
+                <td><button class="botao"onclick="insert('5')"> 5 </button></td>
+                <td><button class="botao"onclick="insert('6')"> 6 </button></td>
+                <td><button class="botao"onclick="insert('+')"> + </button></td>
+            </tr>
+            <tr>
+                <td><button class="botao"onclick="insert('1')"> 1 </button></td>
+                <td><button class="botao"onclick="insert('2')"> 2 </button></td>
+                <td><button class="botao"onclick="insert('3')"> 3 </button></td>
+                <td rowspan="2"><button class="botao"onclick="calcular('=')" style="height: 106px; width: 100%;"> = </button></td>
 
-  
-        <h1 class="tituloInformacao">Informações Pessoais</h1>
-
+            </tr>
+            <tr>
+                <td colspan="2"><button class="botao"onclick="insert('0')" style="width: 106px;"> 0 </button></td>
+                <td ><button class="botao"onclick="insert('.')"> . </button></td> 
+            </tr>
+    </div> 
+    <script>
+        function insert(num) {
+            var resultado = document.getElementById('resultado');
+            if (num === 'x') {
+                resultado.innerHTML += '*';
+            } else {
+                resultado.innerHTML += num;
+            }
+        }
     
-  
-    <h2 class="declaracaoObjetiva">Declaração Objetiva</h2>
+        function clean() {
+            document.getElementById('resultado').innerHTML = "";
+        }
+    
+        function back() {
+            var resultado = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1);
+        }
+    
+        function calcular() {
+            var resultado = document.getElementById('resultado').innerHTML;
+            if (resultado) {
+                try {
+                    document.getElementById('resultado').innerHTML = eval(resultado);
+                } catch (e) {
+                    document.getElementById('resultado').innerHTML = "Erro";
+                }
+            }
+        }
+    </script>
+    
+    
 
-    <p class="paragrafo">Estou em busca de oportunidades para desenvolver e melhorar minhas skills como Web Developer.</p> <br>
-   
-     <hr class="linhaDivisoria">
-
-
-    <h2 class="tituloEscola">Escolaridade :</h2>
-
-<div class="escolaridadeLista">
-    <ul>
-        <li>Ensino Médio Completo em 2017</li>
-        <li>Cursando Analise e Desenvolvimento De Sistemas: Conclusão em 06/2026 (Modalidade EAD)</li>
-    </ul>
 </div>
-
-    <h2 class="cursosExtras">Cursos Extras :</h2>
-
-    <div class="cursosExtrasLista">
-    <ul>
-        <li>Curso-Algoritmos e Lógica de Programação Professor Nelio Alves : 30,9 Horas</li>
-    </ul>
-    </div>
-
-    <hr class="linhaDivisoria">
-
-    <h2 class="experiencias">Experiencias Profissionais</h2>
-
-    <hr class="linhaDivisoria">
-
-
-   
-
-
-<div class="paragrafoCaixa">
-    <p class="paragrafoDois">Ainda nao tive a honra de trabalhar com profissionais, mas venho me aperfeiçoando a cada dia com projetos pessoais que eu mesmo trabalhei para desenvolver, com a ajuda do youtube, e de outras ferramentas.</p>
-
-  <hr class="linhaDivisoria"> 
-
-</div> 
-
-
-    <h2 class="projetos">Projetos</h2>
-    <hr class="linhaDivisoria"> 
-
-    <div class="projetosLista">
-        <div class="projetoUm">
-            <a href="./Rel-gio-Digital/index.html" class="titulo">Projeto Relogio Digital</a>
-            <img src="./Foto Portifolio/relogio em gtml.png" height="200" width="500" alt="Relogio-Digital">
-        </div>
-        <div class="projetoDois">
-            <a href="Projeto Catalogo De beats" class="titulo">Projeto Catalogo De beats</a>
-            <img src="./Foto Portifolio/Catalogo de beats.png" height="200" width="500" alt="">
-        </div>
-        
-    </div>
-
-    <hr class="linhaDivisoria"> 
-
-    <h2 class="habilidadesRelevantes">Habilidades Relevantes</h2>
-
-
-<div class="habilidadesRelevantesLista">
-    <ul>
-        <li>Facilidade com softwares no geral</li>
-        <li>Ingles Basico - iniciante</li>
-    </ul>
-</div>
-
-<hr class="linhaDivisoria"> 
-
-
-    <footer>
-       <h2 class="contato"> Entre em Contato 🤝</h2>
-
-        <p class="tel"><em>Telefone: (11) 9 9015-7588</em></p>
-
-        <p class="email"><strong>Email: isaac.santos.isaac@hotmail.com</strong></p>
-
-        <p class="github">Github: <a href="https://github.com/IsaacVerde">Acessar Github</a></p>
-
-    </footer>
 </body>
 </html>
